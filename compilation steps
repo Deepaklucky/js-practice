@@ -7,11 +7,11 @@ step 1- npm init -y
 
   step 2- change the script as per your requirement in package.json file
 
-scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:js && npm run build:css",
-    "build:js": "for f in assets/js/*.js; do terser \"$f\" --compress --mangle --comments false --output \"assets/dist/js/$(basename \"$f\" .js).min.js\"; done",
-    "build:css": "for f in assets/css/*.css; do cleancss \"$f\" -o \"assets/dist/css/$(basename \"$f\" .css).min.css\"; done"
-  },
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "for f in assets/js/*.js; do terser \"$f\" --compress --mangle --comments false --output \"assets/dist/js/$(basename \"$f\" .js).min.js\"; done",
+    "build:css": "for f in assets/css/widgets/*.css; do cleancss \"$f\" -o \"assets/dist/css/$(basename \"$f\" .css).min.css\"; done"
+  },
 
   
